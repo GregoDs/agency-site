@@ -1,0 +1,229 @@
+.who-we-are {
+  --ink: #0b0b0d;
+  --paper: #f3f2eb;
+  --accent: #6c38ff;
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  padding: 7rem 3vw 1.5rem;
+  color: var(--ink);
+  background:
+    linear-gradient(rgba(11, 11, 13, 0.055) 1px, transparent 1px),
+    var(--paper);
+  background-size: 100% 25%;
+  border-left: 1px solid rgba(11, 11, 13, 0.12);
+}
+
+.who-we-are__index {
+  position: absolute;
+  top: 7.5rem;
+  left: 3vw;
+}
+
+.who-we-are__index span {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: clamp(1.25rem, 1.8vw, 2rem);
+  font-weight: 600;
+}
+
+.who-we-are__index p,
+.who-we-are__closing,
+.who-we-are__capabilities {
+  font-size: 0.67rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.who-we-are__headline {
+  position: absolute;
+  top: 5.5rem;
+  right: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: clamp(4.8rem, 10vw, 10.5rem);
+  font-weight: 600;
+  line-height: 0.72;
+  letter-spacing: -0.09em;
+  text-transform: uppercase;
+}
+
+.who-we-are__headline-accent {
+  color: var(--accent);
+}
+
+.who-we-are__intro {
+  position: absolute;
+  top: 41%;
+  left: 3vw;
+  width: min(30vw, 27rem);
+}
+
+.who-we-are__intro p {
+  font-size: clamp(0.82rem, 1vw, 1rem);
+  line-height: 1.35;
+}
+
+.who-we-are__intro .who-we-are__lead {
+  margin-bottom: 1.25rem;
+  font-size: clamp(1.15rem, 1.65vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.who-we-are__orb {
+  position: absolute;
+  bottom: 2rem;
+  left: 3vw;
+  display: grid;
+  width: clamp(9rem, 14vw, 14rem);
+  aspect-ratio: 1;
+  place-content: center;
+  place-items: center;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  transform: rotate(-12deg);
+}
+
+.who-we-are__orb::before {
+  position: absolute;
+  width: 76%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  content: "";
+}
+
+.who-we-are__orb span {
+  position: relative;
+  z-index: 1;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.who-we-are__orb strong {
+  position: relative;
+  z-index: 1;
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 0.8;
+}
+
+.who-we-are__capabilities {
+  position: absolute;
+  right: 3vw;
+  bottom: 6.2rem;
+  width: min(51vw, 48rem);
+  list-style: none;
+}
+
+.who-we-are__capabilities li {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  padding: 0.62rem 0;
+  border-top: 1px solid rgba(11, 11, 13, 0.35);
+}
+
+.who-we-are__capabilities li:last-child {
+  border-bottom: 1px solid rgba(11, 11, 13, 0.35);
+}
+
+.who-we-are__capabilities span {
+  color: var(--accent);
+}
+
+.who-we-are__closing {
+  position: absolute;
+  right: 3vw;
+  bottom: 1.5rem;
+  width: min(32rem, 43vw);
+  font-size: clamp(0.72rem, 0.9vw, 0.9rem);
+}
+
+.who-we-are__progress {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+}
+
+.who-we-are__progress span {
+  display: block;
+  width: 2.5rem;
+  height: 1px;
+  background: var(--ink);
+}
+
+@media (max-width: 760px) {
+  .who-we-are {
+    min-height: auto;
+    padding: 5.5rem 1rem 2rem;
+    border-top: 1px solid rgba(11, 11, 13, 0.15);
+    border-left: 0;
+    background-size: 100% 20%;
+  }
+
+  .who-we-are__index,
+  .who-we-are__headline,
+  .who-we-are__intro,
+  .who-we-are__orb,
+  .who-we-are__capabilities,
+  .who-we-are__closing {
+    position: relative;
+    inset: auto;
+  }
+
+  .who-we-are__index {
+    margin-bottom: 3rem;
+  }
+
+  .who-we-are__headline {
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    font-size: clamp(3.6rem, 18vw, 6rem);
+    line-height: 0.78;
+  }
+
+  .who-we-are__intro {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .who-we-are__intro p {
+    max-width: 30rem;
+  }
+
+  .who-we-are__orb {
+    width: 8.5rem;
+    margin: 0 0 3rem auto;
+  }
+
+  .who-we-are__capabilities {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .who-we-are__closing {
+    width: 85%;
+    margin-left: auto;
+  }
+
+  .who-we-are__progress {
+    display: none;
+  }
+}

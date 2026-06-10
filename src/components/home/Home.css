@@ -1,0 +1,65 @@
+.home-transition {
+  position: relative;
+  height: 200vh;
+}
+
+.home-transition__sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.home-transition__track {
+  display: flex;
+  width: 200vw;
+  height: 100%;
+  will-change: transform;
+}
+
+.home-transition__track > * {
+  flex: 0 0 100vw;
+  width: 100vw;
+}
+
+@media (max-width: 760px) {
+  .home-transition {
+    height: auto;
+  }
+
+  .home-transition__sticky {
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+
+  .home-transition__track {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: none !important;
+  }
+
+  .home-transition__track > * {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-transition {
+    height: auto;
+  }
+
+  .home-transition__sticky {
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+
+  .home-transition__track {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: none !important;
+  }
+}

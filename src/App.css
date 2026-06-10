@@ -1,0 +1,88 @@
+.page-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+  color: #fff;
+  background: #0b0b0d;
+  pointer-events: all;
+}
+
+.page-gate--entering {
+  animation: gate-enter 700ms both cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.page-gate--leaving {
+  animation: gate-leave 750ms both cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.page-gate span,
+.page-gate strong {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-gate span {
+  margin-bottom: 1rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.page-gate strong {
+  max-width: 90vw;
+  font-size: clamp(3.5rem, 10vw, 10rem);
+  font-weight: 500;
+  line-height: 0.8;
+  letter-spacing: -0.085em;
+}
+
+.page-gate__line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120vw;
+  height: 1px;
+  background: #ff542d;
+  transform: translate(-50%, -50%) rotate(-8deg);
+}
+
+.page-gate--services {
+  background:
+    radial-gradient(circle at 78% 25%, rgba(255, 179, 0, 0.36), transparent 26%),
+    radial-gradient(circle at 18% 80%, rgba(128, 10, 25, 0.7), transparent 35%),
+    #29105e;
+}
+
+.page-gate--services .page-gate__line {
+  background: #ffb000;
+}
+
+@keyframes gate-enter {
+  from {
+    clip-path: inset(100% 0 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+
+@keyframes gate-leave {
+  from {
+    clip-path: inset(0);
+  }
+  to {
+    clip-path: inset(0 0 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-gate--entering,
+  .page-gate--leaving {
+    animation-duration: 1ms;
+  }
+}

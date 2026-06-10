@@ -1,0 +1,214 @@
+.about-page {
+  --ink: #0b0b0d;
+  --paper: #f3f2eb;
+  --accent: #6c38ff;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.about-page__story {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  padding: 7rem 3vw 2rem;
+  background:
+    radial-gradient(circle at 80% 72%, rgba(108, 56, 255, 0.13), transparent 26%),
+    linear-gradient(rgba(11, 11, 13, 0.055) 1px, transparent 1px),
+    var(--paper);
+  background-size: auto, 100% 25%, auto;
+}
+
+.about-page__index {
+  position: absolute;
+  top: 7.5rem;
+  left: 3vw;
+  animation: about-reveal 900ms both cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-page__index span {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-size: clamp(1.25rem, 1.8vw, 2rem);
+  font-weight: 600;
+}
+
+.about-page__index p,
+.about-page__vision > span {
+  font-size: 0.67rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.about-page__story h1 {
+  position: absolute;
+  top: 6rem;
+  right: 3vw;
+  font-size: clamp(5rem, 11vw, 11rem);
+  font-weight: 600;
+  line-height: 0.76;
+  letter-spacing: -0.095em;
+  text-align: right;
+  text-transform: uppercase;
+  animation: about-reveal 1000ms 100ms both cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-page__story h1 span {
+  color: var(--accent);
+}
+
+.about-page__narrative {
+  position: absolute;
+  bottom: 2rem;
+  left: 3vw;
+  width: min(31rem, 34vw);
+  animation: about-reveal 900ms 200ms both cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-page__narrative p {
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  line-height: 1.4;
+}
+
+.about-page__narrative p:first-child {
+  margin-bottom: 1.25rem;
+  font-size: clamp(1.15rem, 1.7vw, 1.7rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.about-page__vision {
+  position: absolute;
+  right: 3vw;
+  bottom: 2rem;
+  width: min(31rem, 35vw);
+  animation: about-reveal 900ms 300ms both cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-page__vision > span {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+}
+
+.about-page__vision strong {
+  font-size: clamp(1.8rem, 3.4vw, 3.6rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.about-page__orb {
+  position: absolute;
+  top: 46%;
+  left: 45%;
+  display: grid;
+  width: clamp(8rem, 13vw, 13rem);
+  aspect-ratio: 1;
+  place-content: center;
+  place-items: center;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  color: #fff;
+  background: var(--accent);
+  transform: rotate(-12deg);
+  animation: about-orb 6s ease-in-out infinite;
+}
+
+.about-page__orb::before {
+  position: absolute;
+  width: 76%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  content: "";
+}
+
+.about-page__orb span,
+.about-page__orb strong {
+  position: relative;
+  z-index: 1;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about-page__orb strong {
+  font-size: 2.6rem;
+  font-weight: 400;
+  line-height: 0.8;
+}
+
+@keyframes about-reveal {
+  from {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes about-orb {
+  50% {
+    transform: translateY(-0.6rem) rotate(-8deg);
+  }
+}
+
+@media (max-width: 760px) {
+  .about-page__story {
+    min-height: auto;
+    padding: 5.5rem 1rem 5rem;
+  }
+
+  .about-page__index,
+  .about-page__story h1,
+  .about-page__narrative,
+  .about-page__vision,
+  .about-page__orb {
+    position: relative;
+    inset: auto;
+  }
+
+  .about-page__index {
+    margin-bottom: 5rem;
+  }
+
+  .about-page__story h1 {
+    margin-bottom: 4rem;
+    font-size: clamp(3.8rem, 18vw, 6rem);
+    text-align: left;
+  }
+
+  .about-page__narrative,
+  .about-page__vision {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .about-page__vision {
+    width: 85%;
+    margin-left: auto;
+  }
+
+  .about-page__orb {
+    width: 8.5rem;
+    margin-left: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page__index,
+  .about-page__story h1,
+  .about-page__narrative,
+  .about-page__vision,
+  .about-page__orb {
+    animation: none;
+  }
+}
