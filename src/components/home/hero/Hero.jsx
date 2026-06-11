@@ -99,7 +99,7 @@ function Hero() {
         <div className="hero__brand hero-reveal">
           <p>Digital agency</p>
           <h2>
-            Gregzzz
+            Rachel&Co
             <br />
             Studio
           </h2>
