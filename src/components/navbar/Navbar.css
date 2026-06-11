@@ -39,7 +39,7 @@
 .navbar__links {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 5.15rem;
 }
 
 .navbar__links > span {
@@ -62,6 +62,25 @@
   transform: translateY(-0.1rem);
 }
 
+.navbar__links .navbar__primary-link {
+  color: #ffd27a;
+  text-shadow:
+    0 0 0.3rem #ffb000,
+    0 0 0.75rem #ff9d00,
+    0 0 1.4rem #ff8a00,
+    0 0 2.2rem #ff6a00;
+  animation: contact-glow 1.8s ease-in-out infinite alternate;
+}
+
+.navbar__links .navbar__primary-link:hover {
+  color: #fff;
+  text-shadow:
+    0 0 0.4rem #fff,
+    0 0 0.9rem #ffd166,
+    0 0 1.8rem #ffad00,
+    0 0 3rem #ff7900;
+}
+
 .navbar__contact {
   text-decoration: none;
 }
@@ -69,6 +88,30 @@
 .navbar__contact span {
   margin-left: 0.35rem;
   font-size: 0.9rem;
+}
+
+@keyframes contact-glow {
+  from {
+    text-shadow:
+      0 0 0.25rem #ffb000,
+      0 0 0.6rem #ff9d00,
+      0 0 1.1rem #ff8a00,
+      0 0 1.8rem #ff6a00;
+  }
+
+  to {
+    text-shadow:
+      0 0 0.4rem #ffe0a3,
+      0 0 0.9rem #ffc247,
+      0 0 1.8rem #ffad00,
+      0 0 2.8rem #ff7900;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar__links .navbar__primary-link {
+    animation: none;
+  }
 }
 
 @media (max-width: 760px) {

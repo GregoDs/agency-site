@@ -63,8 +63,8 @@ function Home({ onNavigate }) {
           </div>
         </div>
       </div>
-      <WhatWeDo onNavigate={onNavigate} />
       <ServicesHome onNavigate={onNavigate} />
+      <WhatWeDo onNavigate={onNavigate} />
       <Footer onNavigate={onNavigate} />
     </>
   );

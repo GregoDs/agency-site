@@ -72,7 +72,7 @@ function ServicesHome({ onNavigate }) {
     <section className="services-home" id="services" ref={sectionRef}>
       <header className="services-home__header" data-service-reveal>
         <div className="services-home__index">
-          <span>04/</span>
+          <span>03/</span>
           <p>
             What we do
             <br />
@@ -85,8 +85,7 @@ function ServicesHome({ onNavigate }) {
           to <span>impact.</span>
         </h2>
         <p className="services-home__statement">
-          Strategy, craft, and technology working together to make brands more
-          useful, visible, and valuable.
+          This are some of the perks and services we offer to our clients.
         </p>
       </header>
 

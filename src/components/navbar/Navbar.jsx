@@ -29,6 +29,7 @@ function Navbar({ onNavigate }) {
         <span />
         {navigation.map(([label, target]) => (
           <a
+            className={label === "Contact" ? "navbar__primary-link" : undefined}
             href={target}
             onClick={(event) => handleNavigate(event, target)}
             key={label}

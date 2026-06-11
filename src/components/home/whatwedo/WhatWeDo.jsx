@@ -75,7 +75,7 @@ function WhatWeDo({ onNavigate }) {
     <section className="what-we-do" id="work">
       <header className="what-we-do__header">
         <div className="what-we-do__index">
-          <span>03/</span>
+          <span>04/</span>
           <p>
             Selected work
             <br />
