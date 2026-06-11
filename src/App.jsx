@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Home from "./components/home/home";
+import Home from "./components/home/Home";
 import Works from "./components/works/Works";
 import Services from "./components/services/Services";
 import About from "./components/about/About";
